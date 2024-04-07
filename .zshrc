@@ -48,9 +48,8 @@ alias tree='eza --tree'
 # bat
 alias cat='bat'
 
-# tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+# cargo
+export PATH="$HOME/.cargo.:$PATH"
 
 # AWS
 alias awslocal="aws --no-cli-pager --endpoint-url=http://localhost:4566"
