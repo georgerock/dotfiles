@@ -21,6 +21,18 @@ if [ "$(uname)" == "Linux" ]; then
     # Starship
     curl -sS https://starship.rs/install.sh | sh
 
+    # tmux
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+    # Node version manager
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+    # Deno
+    curl -fsSL https://deno.land/install.sh | sh
+
+    # Rust
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
     stow .
 
 elif [ "$(uname)" == "Darwin" ]; then
@@ -53,4 +65,9 @@ elif [ "$(uname)" == "Darwin" ]; then
 
     # Starship
     curl -sS https://starship.rs/install.sh | sh
+
+    # tmux
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+    stow .
 fi
