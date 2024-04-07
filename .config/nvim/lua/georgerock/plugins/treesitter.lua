@@ -12,11 +12,25 @@ return {
                 'javascript',
                 'rust',
                 'sql',
+                'toml',
+                'yaml',
+                'json',
+                'gitignore',
+                'dockerfile',
             },
             auto_install = true,
-            sync_insatll = false,
+            sync_install = false,
             highlight = { enable = true },
             indent = { enable = true },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = '<C-space>',
+                    node_incremental = '<C-space>',
+                    scope_incremental = false,
+                    node_decremental = '<bs>',
+                },
+            },
         })
     end,
 }

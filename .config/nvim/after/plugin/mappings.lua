@@ -41,29 +41,31 @@ vim.api.nvim_set_keymap(
 
 vim.keymap.set('n', 'x', '"_x')
 
+vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number' })
 -- window splits
 
 vim.keymap.set(
     'n',
-    '<leader>wsv',
+    '<leader>wv',
     ':vsplit<CR>',
     { desc = 'Split windown vertically' }
 )
 vim.keymap.set(
     'n',
-    '<leader>wsh',
+    '<leader>wh',
     ':split<CR>',
     { desc = 'Split windown horizontally' }
 )
 vim.keymap.set(
     'n',
-    '<leader>wse',
+    '<leader>we',
     '<C-w>=',
     { desc = 'Make split windows equal' }
 )
 vim.keymap.set(
     'n',
-    '<leader>wsx',
+    '<leader>wx',
     ':close<CR>',
     { desc = 'Close current split window' }
 )

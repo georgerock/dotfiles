@@ -43,6 +43,13 @@ return {
                 '<cmd> Neogit commit<CR>',
                 { desc = 'Git commit' }
             )
+
+            vim.keymap.set(
+                'n',
+                '<leader>gB',
+                '<cmd> Neogit branch<CR>',
+                { desc = 'Git branch' }
+            )
         end,
     },
     {
