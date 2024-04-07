@@ -65,6 +65,7 @@ return {
                 'black',
                 'isort',
                 'autopep8',
+                'rustfmt',
             },
         })
     end,

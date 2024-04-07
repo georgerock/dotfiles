@@ -80,7 +80,7 @@ return {
                     -- Navigation
                     map('n', ']c', function()
                         if vim.wo.diff then
-                            return ']c'
+                            return ']h'
                         end
                         vim.schedule(function()
                             gs.next_hunk()
@@ -90,7 +90,7 @@ return {
 
                     map('n', '[c', function()
                         if vim.wo.diff then
-                            return '[c'
+                            return '[h'
                         end
                         vim.schedule(function()
                             gs.prev_hunk()
