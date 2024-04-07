@@ -21,7 +21,7 @@ return {
                         gs.next_hunk()
                     end)
                     return '<Ignore>'
-                end, { expr = true })
+                end, { expr = true, desc = 'Next hunk' })
 
                 map('n', '[c', function()
                     if vim.wo.diff then
@@ -31,7 +31,7 @@ return {
                         gs.prev_hunk()
                     end)
                     return '<Ignore>'
-                end, { expr = true })
+                end, { expr = true, desc = 'Previous hunk' })
 
                 -- Actions
                 map(
