@@ -10,7 +10,18 @@ if [ "$(uname)" == "Linux" ]; then
         sudo chsh -s $(which zsh)
     fi
 
-    sudo dnf install -y git zoxide bat eza fzf ripgrep neovim tmux highlight zsh-syntax-highlighting zsh-autosuggestions 
+    # Packages
+    sudo dnf install -y zoxide bat eza fzf ripgrep neovim tmux highlight zsh stow btop
+
+    # Zsh plugins and theme
+    git clone https://github.com/olets/zsh-abbr ~/.zsh/zsh-abbr
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+    # Starship
+    curl -sS https://starship.rs/install.sh | sh
+
+    stow .
 
 elif [ "$(uname)" == "Darwin" ]; then
     if [ "$(which brew)" ]; then
@@ -28,5 +39,18 @@ elif [ "$(uname)" == "Darwin" ]; then
         sudo chsh -s $(which zsh)
     fi
 
-    brew install git zoxide bat eza fzf ripgrep neovim tmux highlight zsh-syntax-highlighting zsh-autosuggestions
+    # Packages
+    brew install zoxide bat eza fzf ripgrep neovim tmux highlight stow btop
+
+    # Nerd Font
+    brew tap shaunsingh/SFMono-Nerd-Font-Ligaturized
+    brew install --cask font-sf-mono-nerd-font-ligaturized
+    
+    # Zsh plugins and theme
+    git clone https://github.com/olets/zsh-abbr ~/.zsh/zsh-abbr
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+    # Starship
+    curl -sS https://starship.rs/install.sh | sh
 fi

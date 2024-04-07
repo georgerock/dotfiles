@@ -14,8 +14,8 @@ compinit
 # End of lines added by compinstall
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ./zsh-abbr/zsh-abbr.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-abbr/zsh-abbr.zsh
 
 #Aliases
 alias cats='highlight -O ansi --force'
@@ -65,4 +65,3 @@ esac
 # ~/.zshrc
 
 eval "$(starship init zsh)"
-source /home/george/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
