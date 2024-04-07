@@ -33,8 +33,6 @@ if [ "$(uname)" == "Linux" ]; then
     # Rust
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-    stow .
-
 elif [ "$(uname)" == "Darwin" ]; then
     if [ "$(which brew)" ]; then
         echo "Brew already installed, skipping..."
@@ -78,5 +76,4 @@ elif [ "$(uname)" == "Darwin" ]; then
     # tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-    stow .
 fi
