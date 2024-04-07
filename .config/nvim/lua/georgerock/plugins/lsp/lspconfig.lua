@@ -12,6 +12,8 @@ return {
         local opts = { noremap = true, silent = true }
         local telescope = require('telescope.builtin')
 
+        require('neoconf').setup()
+
         local on_attach = function(_, bufnr)
             opts.buffer = bufnr
 
