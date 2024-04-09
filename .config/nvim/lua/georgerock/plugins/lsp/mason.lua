@@ -37,6 +37,7 @@ return {
                 'lua_ls',
                 'rust_analyzer',
                 'pyright',
+                'basedpyright',
                 'ruff_lsp',
                 'tsserver',
                 'jsonls',

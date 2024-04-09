@@ -1,6 +1,12 @@
+---@diagnostic disable: missing-fields
 return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
+    opts = {
+        inlay_hints = {
+            enabled = true,
+        },
+    },
     dependencies = {
         'hrsh7th/cmp-nvim-lsp',
         { 'antosha417/nvim-lsp-file-operations', config = true },
@@ -101,7 +107,7 @@ return {
             on_attach = on_attach,
         })
 
-        lspconfig['pyright'].setup({
+        lspconfig['basedpyright'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
