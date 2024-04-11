@@ -10,4 +10,10 @@ return {
         neotree = true,
         which_key = true,
     },
+    config = function()
+        require('catppuccin').setup({
+            flavour = 'mocha',
+            transparent_background = true,
+        })
+    end,
 }
