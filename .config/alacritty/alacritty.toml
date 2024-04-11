@@ -9,7 +9,7 @@ opacity = 0.85
 x = 25
 
 [font]
-size = 22
+size = 20
 [font.offset]
 y = 12
 [font.glyph_offset]

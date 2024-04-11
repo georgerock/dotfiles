@@ -8,7 +8,6 @@ return {
         'saadparwaiz1/cmp_luasnip', -- LuaSnip completion source
         'rafamadriz/friendly-snippets', -- snippets a la VsCode
         'onsails/lspkind-nvim', -- icons for completion items
-        'chrisgrieser/cmp_yanky', -- completion from yank history
     },
     config = function()
         local cmp = require('cmp')
@@ -41,7 +40,6 @@ return {
                 { name = 'luasnip' },
                 { name = 'buffer' },
                 { name = 'path' },
-                { name = 'cmp_yanky' },
             }),
             formatting = {
                 format = lspkind.cmp_format({
