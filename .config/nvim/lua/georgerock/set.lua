@@ -34,11 +34,3 @@ vim.opt.wildignore:append('*/node_modules/*')
 vim.opt.wildignore:append('*/.venv/*')
 -- Persist undo history across sessions
 vim.opt.undofile = true
-
-vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight yanked text',
-    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-})

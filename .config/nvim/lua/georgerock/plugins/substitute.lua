@@ -1,10 +1,15 @@
 return {
     'gbprod/substitute.nvim',
+    dependencies = {
+        'gbprod/yanky.nvim',
+    },
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
         local substitute = require('substitute')
 
-        substitute.setup()
+        substitute.setup({
+            on_substitute = require('yanky.integration').substitute(),
+        })
 
         vim.keymap.set(
             'n',
