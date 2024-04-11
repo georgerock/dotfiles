@@ -11,7 +11,7 @@ if [ "$(uname)" == "Linux" ]; then
     fi
 
     # Packages
-    sudo dnf install -y zoxide bat eza fzf ripgrep neovim tmux highlight zsh stow btop gh
+    sudo dnf install -y zoxide bat eza fzf ripgrep neovim tmux highlight zsh stow btop gh ruby
 
     # Zsh plugins and theme
     git clone https://github.com/olets/zsh-abbr ~/.zsh/zsh-abbr
@@ -50,7 +50,7 @@ elif [ "$(uname)" == "Darwin" ]; then
     fi
 
     # Packages
-    brew install zoxide bat eza fzf ripgrep neovim tmux highlight stow btop gh
+    brew install zoxide bat eza fzf ripgrep neovim tmux highlight stow btop gh ruby
 
     # Nerd Font
     brew tap shaunsingh/SFMono-Nerd-Font-Ligaturized
