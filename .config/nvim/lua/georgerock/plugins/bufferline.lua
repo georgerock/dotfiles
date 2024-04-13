@@ -21,7 +21,7 @@ return {
                 show_buffer_close_icons = false,
                 diagnostics = 'nvim_lsp',
                 underline_indicator = true,
-                separator_style = 'slope',
+                separator_style = { ' ', ' ' },
                 styles = { 'italic', 'bold' },
                 custom = {
                     all = {
