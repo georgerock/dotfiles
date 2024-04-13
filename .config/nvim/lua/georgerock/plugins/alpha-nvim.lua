@@ -32,14 +32,14 @@ return {
                 '<cmd>Telescope find_files<CR>'
             ),
             dashboard.button(
-                'SPC ps',
+                'SPC fs',
                 '  > Find Word',
                 '<cmd>Telescope live_grep<CR>'
             ),
             dashboard.button(
-                'SPC td',
-                '󰁯  > Restore Session For Current Directory',
-                '<cmd>SessionRestore<CR>'
+                'SPC ts',
+                '󱤟  > Database view',
+                '<cmd>DBUIToggle<CR>'
             ),
             dashboard.button('q', ' > Quit NVIM', '<cmd>qa<CR>'),
         }

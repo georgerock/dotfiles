@@ -1,6 +1,7 @@
 return {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
+    after = 'catppuccin',
     opts = {},
     config = function()
         local highlight = {
