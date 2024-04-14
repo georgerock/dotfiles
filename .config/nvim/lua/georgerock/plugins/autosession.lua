@@ -18,13 +18,13 @@ return {
 
         keymap.set(
             'n',
-            '<leader>wr',
+            '<leader>wsr',
             '<cmd>SessionRestore<CR>',
             { desc = 'Restore session for cwd' }
         ) -- restore last workspace session for current directory
         keymap.set(
             'n',
-            '<leader>ws',
+            '<leader>wss',
             '<cmd>SessionSave<CR>',
             { desc = 'Save session for auto session root dir' }
         ) -- save workspace session for current working directory

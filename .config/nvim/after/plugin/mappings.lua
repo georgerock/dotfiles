@@ -100,3 +100,7 @@ vim.keymap.set('n', '=P', '<Plug>(YankyPutBeforeFilter)')
 
 vim.keymap.set({ 'n', 'x' }, 'x', 'd', { noremap = true, desc = 'Cut' })
 vim.keymap.set({ 'n', 'x' }, 'xx', 'dd', { noremap = true, desc = 'Cut line' })
+
+-- add newlines below/above cursor in normal mode
+vim.keymap.set('n', '<CR>', 'm`o<Esc>``')
+vim.keymap.set('n', '<C-CR>', 'm`O<Esc>``')
