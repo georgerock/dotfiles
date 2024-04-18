@@ -66,12 +66,22 @@ return {
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
-        local signs =
-            { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }
+        local signs = { Error = ' ', Warn = ' ', Info = ' ' }
         for type, icon in pairs(signs) do
             local hl = 'DiagnosticSign' .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
         end
+
+        vim.lsp.handlers['textDocument/publishDiagnostics'] =
+            vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+                underline = true,
+                virtual_text = {
+                    spacing = 4,
+                    severity_limit = 'Warning',
+                },
+                signs = true,
+                update_in_insert = false,
+            })
 
         lspconfig['html'].setup({
             capabilities = capabilities,
@@ -112,6 +122,18 @@ return {
         lspconfig['basedpyright'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            handlers = {
+                ['textDocument/publishDiagnostics'] = vim.lsp.with(
+                    vim.lsp.diagnostic.on_publish_diagnostics,
+                    {
+                        -- Disable hint severity
+                        severity_sort = true,
+                        virtual_text = {
+                            severity_limit = 'Warning',
+                        },
+                    }
+                ),
+            },
         })
 
         lspconfig['ruff_lsp'].setup({
