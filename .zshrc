@@ -22,6 +22,7 @@ alias cats='highlight -O ansi --force'
 alias vim='nvim'
 alias vi='nvim'
 alias vimdiff='nvim -d'
+alias grep="rg"
 
 eval "$(zoxide init --cmd cd zsh)"
 
