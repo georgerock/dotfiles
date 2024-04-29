@@ -35,6 +35,7 @@ return {
         mason_lspconfig.setup({
             ensure_installed = {
                 'lua_ls',
+                'gopls',
                 'rust_analyzer',
                 'pyright',
                 'basedpyright',
@@ -60,6 +61,8 @@ return {
             ensure_installed = {
                 'prettier',
                 'eslint_d',
+                'goimports',
+                'gofumpt',
                 'ruff',
                 'pylint',
                 'stylua',

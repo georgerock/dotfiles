@@ -9,6 +9,7 @@ return {
             javascriptreact = { 'eslint_d' },
             typescriptreact = { 'eslint_d' },
             python = { 'ruff' },
+            go = { 'golangcilint' },
         }
 
         local lint_augroup =

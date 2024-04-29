@@ -1,3 +1,7 @@
 return {
-    "github/copilot.vim",
+    'github/copilot.vim',
+    config = function()
+        require('copilot').setup({})
+        vim.cmd(':Copilot disable')
+    end,
 }
