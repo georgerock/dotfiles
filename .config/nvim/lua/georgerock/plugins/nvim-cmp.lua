@@ -28,8 +28,8 @@ return {
             mapping = {
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-n>'] = cmp.mapping.select_next_item(),
-                ['<CR>'] = cmp.mapping.confirm({ select = true }),
-                ['<C-Space>'] = cmp.mapping.complete(), --show suggestions
+                ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
+                -- ['<C-Space>'] = cmp.mapping.complete(), --show suggestions
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-e>'] = cmp.mapping.abort(), -- close suggestion window
