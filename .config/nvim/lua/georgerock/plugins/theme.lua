@@ -18,7 +18,6 @@ return {
         },
         treesitter = true,
         mason = true,
-        neotree = true,
         neogit = true,
         noice = true,
         which_key = true,
