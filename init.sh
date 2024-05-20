@@ -17,6 +17,7 @@ if [ "$(uname)" == "Linux" ]; then
     git clone https://github.com/olets/zsh-abbr ~/.zsh/zsh-abbr
     git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/fzf-tab
 
     # Starship
     curl -sS https://starship.rs/install.sh | sh

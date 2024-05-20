@@ -4,6 +4,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt extendedglob nomatch notify
 setopt share_history
+setopt hist_ignore_space
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
@@ -21,6 +22,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-abbr/zsh-abbr.zsh
@@ -45,11 +47,12 @@ export PATH="$DENO_INSTALL/bin:$PATH:$HOME/.cargo/env:$HOME/.local/bin/poetry"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
 eval "$(pyenv virtualenv-init -)"
 
-# exa
+# fzf
+eval "$(fzf --zsh)"
 
+# exa
 alias ls='eza'
 alias ll='eza -alh'
 alias tree='eza --tree'
@@ -70,6 +73,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# ~/.zshrc
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# ~/.zshrc
 eval "$(starship init zsh)"
