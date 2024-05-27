@@ -50,7 +50,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # fzf
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 
 # exa
 alias ls='eza'
