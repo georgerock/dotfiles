@@ -35,34 +35,11 @@ return {
             opts.desc = 'Show LSP implementations'
             keymap.set('n', 'gi', telescope.lsp_implementations, opts)
 
-            opts.desc = 'Show LSP signature help'
-            keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-
             opts.desc = 'Show LSP code actions'
             keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 
             opts.desc = 'Smart rename'
             keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-
-            opts.desc = 'Go to next diagnostic'
-            keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-
-            opts.desc = 'Go to previous diagnostic'
-            keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-
-            opts.desc = 'Smart line diagnostics'
-            keymap.set('n', '<leader>d', vim.lsp.diagnostic.open_flat, opts)
-
-            opts.desc = 'Smart buffer diagnostics'
-            keymap.set(
-                'n',
-                '<leader>D',
-                '<cmd> Telescope diagnostics bufnr=0<CR>',
-                opts
-            )
-
-            opts.desc = 'Restart lsp'
-            keymap.set('n', '<leader>lsr', '<cmd> LspRestart<CR>', opts)
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()

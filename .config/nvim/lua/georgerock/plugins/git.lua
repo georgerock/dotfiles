@@ -78,7 +78,7 @@ return {
                     end
 
                     -- Navigation
-                    map('n', ']c', function()
+                    map('n', ']h', function()
                         if vim.wo.diff then
                             return ']h'
                         end
@@ -88,7 +88,7 @@ return {
                         return '<Ignore>'
                     end, { expr = true, desc = 'Next hunk' })
 
-                    map('n', '[c', function()
+                    map('n', '[h', function()
                         if vim.wo.diff then
                             return '[h'
                         end
