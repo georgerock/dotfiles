@@ -93,6 +93,9 @@ return {
             on_attach = on_attach,
             settings = {
                 Lua = {
+                    hint = {
+                        enable = true,
+                    },
                     runtime = {
                         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
                         version = 'LuaJIT',
@@ -117,11 +120,52 @@ return {
         lspconfig['rust_analyzer'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            inlayHints = {
+                bindingModeHints = {
+                    enable = false,
+                },
+                chainingHints = {
+                    enable = true,
+                },
+                closingBraceHints = {
+                    enable = true,
+                    minLines = 25,
+                },
+                closureReturnTypeHints = {
+                    enable = 'never',
+                },
+                lifetimeElisionHints = {
+                    enable = 'never',
+                    useParameterNames = false,
+                },
+                maxLength = 25,
+                parameterHints = {
+                    enable = true,
+                },
+                reborrowHints = {
+                    enable = 'never',
+                },
+                renderColons = true,
+                typeHints = {
+                    enable = true,
+                    hideClosureInitialization = false,
+                    hideNamedConstructor = false,
+                },
+            },
         })
 
         lspconfig['basedpyright'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            settings = {
+                basedpyright = {
+                    analysis = {
+                        autoSearchPaths = true,
+                        useLibraryCodeForTypes = true,
+                        diagnosticMode = 'workspace',
+                    },
+                },
+            },
             handlers = {
                 ['textDocument/publishDiagnostics'] = vim.lsp.with(
                     vim.lsp.diagnostic.on_publish_diagnostics,
@@ -139,6 +183,17 @@ return {
         lspconfig['gopls'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            settings = {
+                hints = {
+                    rangeVariableTypes = true,
+                    parameterNames = true,
+                    constantValues = true,
+                    assignVariableTypes = true,
+                    compositeLiteralFields = true,
+                    compositeLiteralTypes = true,
+                    functionTypeParameters = true,
+                },
+            },
         })
 
         lspconfig['ruff_lsp'].setup({
@@ -146,9 +201,58 @@ return {
             on_attach = on_attach,
         })
 
+        lspconfig['denols'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                deno = {
+                    inlayHints = {
+                        parameterNames = {
+                            enabled = 'all',
+                            suppressWhenArgumentMatchesName = true,
+                        },
+                        parameterTypes = { enabled = true },
+                        variableTypes = {
+                            enabled = true,
+                            suppressWhenTypeMatchesName = true,
+                        },
+                        propertyDeclarationTypes = { enabled = true },
+                        functionLikeReturnTypes = { enable = true },
+                        enumMemberValues = { enabled = true },
+                    },
+                },
+            },
+        })
+
         lspconfig['tsserver'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            settings = {
+                typescript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = 'all',
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+                javascript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = 'all',
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+            },
         })
 
         lspconfig['jsonls'].setup({

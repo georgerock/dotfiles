@@ -36,6 +36,7 @@ return {
             ensure_installed = {
                 'lua_ls',
                 'gopls',
+                'denols',
                 'rust_analyzer',
                 'pyright',
                 'basedpyright',
