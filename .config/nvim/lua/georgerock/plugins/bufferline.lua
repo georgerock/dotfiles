@@ -1,7 +1,6 @@
 return {
     'akinsho/bufferline.nvim',
     version = '*',
-    after = 'catppuccin',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         local mocha = require('catppuccin.palettes').get_palette('mocha')

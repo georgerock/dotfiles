@@ -39,7 +39,7 @@ return {
             keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 
             opts.desc = 'Smart rename'
-            keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+            keymap.set('n', '<leader>cn', vim.lsp.buf.rename, opts)
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -54,7 +54,7 @@ return {
                 underline = true,
                 virtual_text = {
                     spacing = 4,
-                    severity_limit = 'Warning',
+                    min = vim.diagnostic.severity.WARN,
                 },
                 signs = true,
                 update_in_insert = false,
@@ -141,7 +141,7 @@ return {
                         -- Disable hint severity
                         severity_sort = true,
                         virtual_text = {
-                            severity_limit = 'Warning',
+                            min = vim.diagnostic.severity.WARN,
                         },
                     }
                 ),

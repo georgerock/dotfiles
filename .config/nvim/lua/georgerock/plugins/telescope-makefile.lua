@@ -2,8 +2,8 @@ return {
     'sopa0/telescope-makefile',
     dependencies = {
         'akinsho/nvim-toggleterm.lua',
+        'nvim-telescope/telescope.nvim',
     },
-    after = 'telescope',
     event = 'VeryLazy',
     config = function()
         require('telescope').load_extension('make')
