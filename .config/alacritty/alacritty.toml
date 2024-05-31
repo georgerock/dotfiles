@@ -9,13 +9,13 @@ opacity = 0.85
 x = 25
 
 [font]
-size = 22
+size = 19
 [font.offset]
 y = 12
 [font.glyph_offset]
 y = 6
 [font.normal]
-family = "Liga SFMono Nerd Font"
+family = "MonoLisa Nerd Font Mono"
 
 [colors.primary]
 background = "#1e1e2e"
