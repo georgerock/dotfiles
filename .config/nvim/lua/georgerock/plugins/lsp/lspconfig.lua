@@ -65,6 +65,24 @@ return {
             on_attach = on_attach,
         })
 
+        lspconfig['clangd'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                clangd = {
+                    InlayHints = {
+                        Designators = true,
+                        Enabled = true,
+                        ParameterNames = true,
+                        DeducedTypes = true,
+                    },
+                    fallbackFlags = {
+                        '--std=c++20',
+                    },
+                },
+            },
+        })
+
         lspconfig['lua_ls'].setup({
             capabilities = capabilities,
             on_attach = on_attach,

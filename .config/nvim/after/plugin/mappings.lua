@@ -4,15 +4,6 @@ function buffer_at_index(index)
     vim.cmd('BufferLineGoToBuffer ' .. index)
 end
 
-for i = 1, 9 do
-    vim.api.nvim_set_keymap(
-        'n',
-        '<Leader>' .. i,
-        ':lua buffer_at_index(' .. i .. ')<CR>',
-        { noremap = true, silent = true }
-    )
-end
-
 vim.keymap.set(
     'n',
     '<leader>ts',

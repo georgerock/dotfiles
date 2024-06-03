@@ -37,6 +37,7 @@ return {
                 'lua_ls',
                 'gopls',
                 'denols',
+                'clangd',
                 'rust_analyzer',
                 'pyright',
                 'basedpyright',
@@ -61,12 +62,14 @@ return {
         mason_tool_installer.setup({
             ensure_installed = {
                 'prettier',
+                'clang-format',
                 'eslint_d',
                 'goimports',
                 'gofumpt',
                 'ruff',
                 'pylint',
                 'stylua',
+                'cpplint',
                 'black',
                 'isort',
                 'autopep8',
