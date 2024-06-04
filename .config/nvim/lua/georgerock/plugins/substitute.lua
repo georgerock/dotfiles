@@ -24,12 +24,6 @@ return {
             { desc = 'Substitute entire line', noremap = true }
         )
         vim.keymap.set(
-            'n',
-            'S',
-            substitute.eol,
-            { desc = 'Substitute end of line', noremap = true }
-        )
-        vim.keymap.set(
             'x',
             's',
             substitute.visual,

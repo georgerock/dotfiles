@@ -13,6 +13,12 @@ return {
                 end,
                 'Flash jump',
             },
+            S = {
+                function()
+                    require('flash').treesitter()
+                end,
+                'Treesitter flash',
+            },
         }, { prefix = '<leader>' })
     end,
 }
