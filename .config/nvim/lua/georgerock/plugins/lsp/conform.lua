@@ -11,6 +11,7 @@ return {
                 typescript = { 'prettier' },
                 javascriptreact = { 'prettier' },
                 typescriptreact = { 'prettier' },
+                astro = { 'prettierd' },
                 svelte = { 'prettier' },
                 css = { 'prettier' },
                 html = { 'prettier' },

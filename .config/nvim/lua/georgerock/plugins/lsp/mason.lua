@@ -34,6 +34,9 @@ return {
 
         mason_lspconfig.setup({
             ensure_installed = {
+                'jdtls',
+                'kotlin_language_server',
+                'astro',
                 'lua_ls',
                 'gopls',
                 'denols',
@@ -42,10 +45,11 @@ return {
                 'pyright',
                 'basedpyright',
                 'ruff_lsp',
-                'tsserver',
+                'ts_ls',
                 'jsonls',
                 'eslint',
                 'taplo', -- TOML
+                'astro',
                 'html',
                 'sqlls',
                 'cssls',

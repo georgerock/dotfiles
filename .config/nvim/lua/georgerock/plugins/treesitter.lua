@@ -8,6 +8,13 @@ return {
             ensure_installed = {
                 'lua',
                 'python',
+                'go',
+                'java',
+                'kotlin',
+                'c',
+                'astro',
+                'html',
+                'css',
                 'typescript',
                 'javascript',
                 'rust',

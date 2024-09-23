@@ -166,6 +166,43 @@ return {
             },
         })
 
+        lspconfig['astro'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { 'astro' },
+        })
+
+        lspconfig['jdtls'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                java = {
+                    inlayHints = {
+                        parameterNames = {
+                            enabled = 'all',
+                            exclusions = {
+                                'this',
+                            },
+                        },
+                    },
+                },
+            },
+        })
+
+        lspconfig['kotlin_language_server'].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                kotlin = {
+                    hints = {
+                        typeHints = true,
+                        parameterHints = true,
+                        chainedHints = true,
+                    },
+                },
+            },
+        })
+
         lspconfig['gopls'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
@@ -210,7 +247,7 @@ return {
             },
         })
 
-        lspconfig['tsserver'].setup({
+        lspconfig['ts_ls'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             settings = {

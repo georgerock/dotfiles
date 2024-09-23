@@ -1,21 +1,22 @@
 return {
     'folke/trouble.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', 'folke/todo-comments.nvim' },
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = 'Trouble',
     keys = {
         {
             '<leader>tt',
-            '<cmd>TroubleToggle<CR>',
-            desc = 'Toggle file trouble',
+            '<cmd>Trouble diagnostics toggle<cr>',
+            desc = 'Toggle Diagnostics (Trouble)',
         },
         {
-            '<leader>tw',
-            '<cmd>TroubleToggle workspace_diagnostics<CR>',
-            desc = 'Toggle workspace diagnostics',
+            '<leader>ta',
+            '<cmd>Trouble symbols toggle focus=false<cr>',
+            desc = 'Toggle Symbols outline (Trouble)',
         },
         {
-            '<leader>tc',
-            '<cmd>TodoTrouble<CR>',
-            desc = 'Toggle chore list (todos)',
+            '<leader>tl',
+            '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
+            desc = 'Toggle LSP Definitions / references / ... (Trouble)',
         },
     },
 }
