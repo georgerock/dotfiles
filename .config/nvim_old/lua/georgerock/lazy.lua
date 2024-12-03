@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup(
-    { { import = 'georgerock.plugins' } }, --  { import = 'georgerock.plugins.lsp' } 
+    { { import = 'georgerock.plugins' }, { import = 'georgerock.plugins.lsp' } },
     {
         install = {
             colorscheme = { 'catppuccin' },

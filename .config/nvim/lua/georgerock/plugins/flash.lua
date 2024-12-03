@@ -4,21 +4,7 @@ return {
     opts = {},
     keys = {},
     config = function()
-        local wk = require('which-key')
-        wk.register({
-            name = 'Flash',
-            s = {
-                function()
-                    require('flash').jump()
-                end,
-                'Flash jump',
-            },
-            S = {
-                function()
-                    require('flash').treesitter()
-                end,
-                'Treesitter flash',
-            },
-        }, { prefix = '<leader>' })
+        vim.keymap.set("n", "<leader>s", require('flash').jump, {desc = "Flash jump"})
+        vim.keymap.set("n", "<leader>S", require('flash').treesitter, {desc = "Flash treesitter"})
     end,
 }

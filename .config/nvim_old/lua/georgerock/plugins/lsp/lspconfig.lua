@@ -203,22 +203,6 @@ return {
             },
         })
 
-        lspconfig['gopls'].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = {
-                hints = {
-                    rangeVariableTypes = true,
-                    parameterNames = true,
-                    constantValues = true,
-                    assignVariableTypes = true,
-                    compositeLiteralFields = true,
-                    compositeLiteralTypes = true,
-                    functionTypeParameters = true,
-                },
-            },
-        })
-
         lspconfig['ruff_lsp'].setup({
             capabilities = capabilities,
             on_attach = on_attach,

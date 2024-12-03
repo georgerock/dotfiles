@@ -42,7 +42,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export DENO_INSTALL="/home/george/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH:$HOME/.cargo/env:$HOME/.local/bin/poetry"
+export POETRY_HOME="~/.poetry"
+export PATH="/Users/cosmageorge/.poetry/bin:$DENO_INSTALL/bin:$PATH:$HOME/.cargo/env:$HOME/.local/bin/poetry"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -83,3 +84,7 @@ eval "$(starship init zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+# Created by `pipx` on 2024-10-16 11:27:58
+export PATH="$PATH:/Users/cosmageorge/.local/bin"
