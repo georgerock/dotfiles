@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.font = wezterm.font("MonoLisa Nerd Font Mono", { weight = "Bold", stretch = "SemiExpanded" })
-config.font_size = 20
+config.font_size = 15
 
 config.window_padding = {
 	left = 0,
@@ -16,6 +16,7 @@ config.automatically_reload_config = true
 config.line_height = 2
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.92
+config.macos_window_background_blur = 20
 
 return config
